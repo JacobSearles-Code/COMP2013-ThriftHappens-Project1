@@ -1,0 +1,65 @@
+body {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFE097;
+}
+
+.navImg {
+    max-width: 30%;
+    max-height: 200px;
+}
+
+.bkgBannerLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 50%;
+}
+
+.bkgBannerRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 200px;
+    width: 50%;
+    rotate: 180deg;
+}
+
+.thriftNavBar {
+    height: 200px;
+    width: 100%;
+    background-color: cadetblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    align-content: center;
+}
+
+.clothesCard {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    background: #5F9EA0;
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.cardContainer {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clothesImg {
+    aspect-ratio: 4 / 4;
+    overflow: hidden;
+    border-radius: 1rem;
+}

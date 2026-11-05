@@ -679,3 +679,4 @@ export const products: ClothingProduct[] = [
     itemQuantity: 0,
   },
 ];
+
