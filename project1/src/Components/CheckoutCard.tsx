@@ -1,7 +1,16 @@
-function CheckoutCard() {
+import type {CartCardProps} from "./ThriftHappens.tsx";
+
+function CheckoutCard({
+                          id,
+                          name,
+                          itemQuantity,
+                          price,
+                          handleOnDelete,
+                      }: CartCardProps) {
     return (
         <div>
-            <h1>Checkout Card</h1>
+            <p>{name} x{itemQuantity}</p>
+            <p>${price.toFixed(2)}/each <button onClick={() => handleOnDelete(id) }>Remove</button></p>
         </div>
     )
 }

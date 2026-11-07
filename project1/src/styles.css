@@ -46,20 +46,183 @@ body {
     border: 1px solid black;
     background: #5F9EA0;
     overflow: hidden;
-    margin-bottom: 10px;
     text-align: center;
     padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 575px;
+}
+
+.clothesCardBody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.clothesCardBody p {
+    margin: 3px;
+}
+
+.clothesCardBody h3 {
+    margin: 3px;
+}
+
+.itemCardBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: auto;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    border: 0;
+    border-radius: 15px;
+}
+
+button:enabled {
+    cursor: pointer;
+    background-color: #D23F50;
+    border: 0;
+    border-radius: 15px;
+}
+
+button:enabled:hover {
+    background-color: #EE656F;
 }
 
 .cardContainer {
-    justify-content: space-around;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 5px;
 }
 
 .clothesImg {
     aspect-ratio: 4 / 4;
-    overflow: hidden;
     border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.cartDiv {
+    height: 90%;
+    width: 20%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    pointer-events: none;
+}
+
+.cartContainer {
+    position: absolute;
+    background-color: #FFE097;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.25s ease-out;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    pointer-events: auto;
+}
+
+.cartItemsDiv {
+    height: 75%;
+    /* Had to add a scroll bar to the cart because my partner added every single item to the cart at once*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: 2px solid black;
+}
+
+.cartContainer.open {
+    transform: translateX(0%);
+}
+
+.cartContainer.closed {
+    transform: translateX(110%);
+}
+
+.cartBtn {
+    display: flex;
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EE6672;
+    bottom: -6%;
+    right: 100px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-left: 5px solid #123C30;
+    border-right: 5px solid #123C30;
+    border-top: 5px solid #123C30;
+    transform: translateY(0%);
+    transition: transform 0.2s ease-out;
+    box-shadow: 0px 0px 10px black;
+    pointer-events: auto;
+}
+
+.cartBtn.open {
+    transform: translateY(0%);
+}
+
+.cartBtn.closed {
+    transform: translateY(110%);
+}
+
+.cartBtn:hover {
+    cursor: pointer;
+}
+
+.exitBtn {
+    color: maroon;
+    position: absolute;
+    right: 25px;
+    pointer-events: auto;
+}
+
+.exitBtn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.cartTotals {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alertDot {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    border-radius: 50%;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border: 3px solid maroon;
+    animation: fadeIn 0.1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 100%;
+    }
 }

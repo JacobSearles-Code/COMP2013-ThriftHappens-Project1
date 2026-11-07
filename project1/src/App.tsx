@@ -5,7 +5,8 @@ import {products} from './Data/data.ts'
 function App() {
   return (
     <>
-      <ThriftHappens data={products}/>
+        <title>Thrift Happens</title>
+        <ThriftHappens data={products}/>
     </>
   )
 }
